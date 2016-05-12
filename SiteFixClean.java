@@ -22,10 +22,10 @@ public class SiteFixClean {
     public static void main(String []args) {
 		BufferedReader in = null;
 		PrintWriter clearFile = null;
-		String lineCheck = new String("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0;\">");
-		String iconCode = new String("<link rel=\"icon\" href=\"uploads/7/0/7/1/70716011/dslogo.ico\" type=\"image/x-icon\">");
-		String line = new String();                          // ^ this part of the html sets the icon and will need to change since 
-		Stack fileNames = new Stack();                       //   the name of your icon and the path to it will change for each site.
+		String lineCheck = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0;\">";
+		String iconCode = "<link rel=\"icon\" href=\"uploads/7/0/7/1/70716011/dslogo.ico\" type=\"image/x-icon\">";
+		String line = new String();               // ^ this part of the html sets the icon and will need to change since 
+		Stack fileNames = new Stack();            //   the name of your icon and the path to it will change for each site.
 		String srcDir = "Resources\\";
 		String destDir = "Fresh_Export\\";
 		String srcPath = new String();
@@ -34,8 +34,8 @@ public class SiteFixClean {
 		Path dest;
 		
 		//Push the files you want in the upload folder into the stack:
-		fileNames.push(new String("1453081009.png"));
-		fileNames.push(new String("dslogo.ico"));
+		fileNames.push("1453081009.png");
+		fileNames.push("dslogo.ico");
 		
 		//Move the files in the stack to the correct directory:
 		
